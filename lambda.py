@@ -38,13 +38,7 @@ def lambda_handler(event, context):
                              headers=request_headers,
                              data=json.dumps(request_body))
   
-  convertbytes = response.encode("ascii")
-  convertedbytes = base64.b64decode(convertbytes)
-  decodedsample = convertedbytes.decode("ascii")
-  print(f"The string after decoding is: {decodedsample}")
-  f = open('base64_out.txt', 'w')
-  f.write(decodedsample)
-  f.close()
+  
  
   if response.status_code == 200:
     return {
