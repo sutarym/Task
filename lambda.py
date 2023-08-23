@@ -36,7 +36,7 @@ def lambda_handler(event, context):
 
   response = requests.post('https://ij92qpvpma.execute-api.eu-west-1.amazonaws.com/candidate-email_serverless_lambda_stage/data',
                              headers=request_headers,
-                             data=jrequest_body)
+                             data=request_body)
   
   
  
